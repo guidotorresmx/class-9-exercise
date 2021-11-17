@@ -1,22 +1,31 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function calc(operation="", a, b) {
+function sum(a=0,b=0){return a+b}
+
+function difference(a=0, b=0) {return a - b}
+
+function product(a=0, b=1) {return a*b}
+
+function quotient(a=0, b=1) {return (b===0)? 'ERROR': a/b}
+
+
+function calc(operation, a, b) {
   // ==================================================
   // DEFINE VARIABLE(S)
   // ==================================================
   switch(operation) {
     case "add":
-      return a + b;
+      return sum(a, b);
       break;
     case "subtract":
-      return a - b;
+      return difference(a, b);
       break;
     case "multiply":
-      return a * b;
+      return product(a, b);
       break;
     case "divide":
-      return a / b;
+      return quotient(a, b);
       break;
     default:
       return 'Operation not supported';
